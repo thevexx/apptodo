@@ -1,0 +1,25 @@
+<app-menu></app-menu>
+
+
+<div class="container">
+  <!-- one-way binding -->
+  <h1 class="mt-5">Welcome to {{message}}</h1>
+  <p>The logo in the navbar is now a default Bootstrap feature in Bootstrap 4! Make sure to set the width and height of
+    the logo within the HTML. For best results, it's recommended that you use an SVG image as your logo.</p>
+  <input type="text" #mymsg>  <button (click)="btnClicked(mymsg.value)"> click me !</button>
+<!-- event binding -->
+
+  <br>
+
+  <input type="text" [(ngModel)]="message">
+<!-- two-way binding -->
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- attribute binding -->
+<button (click)="isDisabled = !isDisabled"> play with me </button>
+<button [disabled]="isDisabled" (click)="btnClicked('hahahahhaha')"> victim</button>
+</div>
